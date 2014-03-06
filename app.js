@@ -27,12 +27,12 @@ app.use(app.router);
 app.get('/', routes.index);
 app.get('/users', users.list);
 
-/// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+// /// catch 404 and forwarding to error handler
+// app.use(function(req, res, next) {
+//     var err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// });
 
 /// error handlers
 
@@ -47,14 +47,14 @@ if (app.get('env') === 'development') {
     });
 }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
+// // production error handler
+// // no stacktraces leaked to user
+// app.use(function(err, req, res, next) {
+//     res.render('error', {
+//         message: err.message,
+//         error: {}
+//     });
+// });
 
 //module.exports = app;
 http.createServer(app).listen(app.get('port'), function () {

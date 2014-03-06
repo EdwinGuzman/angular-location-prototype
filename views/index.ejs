@@ -4,12 +4,13 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src='/vendor/angular/angular.min.js'></script>
+    <script src='/vendor/angular-route/angular-route.min.js'></script>
     <script src='/vendor/angularjs-geolocation/dist/angularjs-geolocation.min.js'></script>
-    <script src='/javascripts/controller/locinator.js'></script>
+    <script src='/javascripts/locinator.js'></script>
   </head>
   <body>
-    <div ng-init='setLibraries(<%= libraries %>)'>
-
+    <div ng-controller='loc' ng-init='setLocations(<%=locations%>)'>
+test
     </div>
   </body>
 </html>
